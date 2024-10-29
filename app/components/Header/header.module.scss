@@ -1,0 +1,11 @@
+@use "../../styles/colors.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+
+.header {
+  background-color: $secondary-color;
+}
+
+.navigation-list {
+  @include reset-list;
+}

@@ -1,0 +1,14 @@
+@use "./colors.scss" as *;
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+
