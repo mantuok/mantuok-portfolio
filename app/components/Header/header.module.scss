@@ -5,10 +5,20 @@
 
 .header {
   @include container;
+
+  position: fixed;
+  top: 0;
   max-width: 100vw;
   padding-top: 18px;
   padding-bottom: 18px;
   background-color: $secondary-color;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.visible {
+  transform: translateY(0);
 }
 
 .navigation-list {

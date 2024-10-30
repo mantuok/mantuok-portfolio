@@ -5,7 +5,7 @@ import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 
 const poppins = Poppins({
-  weight: ["300", "400", "500", "700", "800"],
+  weight: ["200", "300", "400", "500", "700", "800"],
   subsets: ["latin"],
 });
 
@@ -22,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Header />
         {children}
+        <Header />
         <Footer />
       </body>
     </html>

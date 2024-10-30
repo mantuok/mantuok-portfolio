@@ -1,7 +1,12 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import styles from "./header.module.scss";
 import { NAV_ITEMS } from "./../../constants";
 
 const Header = () => {
+  const [isVisible, setVisible] = useState(false);
+
   const renderLink = (label: string) => {
     return (
       <li>
@@ -10,8 +15,24 @@ const Header = () => {
     );
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > window.innerHeight) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={styles["header"]}>
+    <header
+      className={`${styles["header"]} ${isVisible ? styles.visible : ""}`}
+    >
       <nav>
         <ul className={styles["navigation-list"]}>
           {NAV_ITEMS.map((item) => renderLink(item.label))}
