@@ -4,10 +4,10 @@
 
 
 .header {
-  @include container;
+  // @include container;
   position: fixed;
   top: 0;
-  max-width: 100vw;
+  width: 100%;
   padding-top: 18px;
   padding-bottom: 18px;
   background-color: $secondary-color;
@@ -25,5 +25,6 @@
   display: flex;
   justify-content: flex-end;
   gap: 47px;
+  padding: 0 74px;
   color: $primary-color;
 }

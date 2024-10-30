@@ -2,15 +2,17 @@
 
 import { useState, useEffect } from "react";
 import styles from "./header.module.scss";
-import { NAV_ITEMS } from "./../../constants";
+import { NAV_ITEM } from "./../../constants";
 
 const Header = () => {
   const [isVisible, setVisible] = useState(false);
 
-  const renderLink = (id: string, label: string) => {
+  const renderLink = (id: string, href: string, label: string) => {
     return (
       <li key={id}>
-        <a className={styles["link"]}>{label}</a>
+        <a className={styles["link"]} href={href}>
+          {label}
+        </a>
       </li>
     );
   };
@@ -35,7 +37,9 @@ const Header = () => {
     >
       <nav>
         <ul className={styles["navigation-list"]}>
-          {NAV_ITEMS.map((item) => renderLink(item.href, item.label))}
+          {Object.entries(NAV_ITEM).map(([key, item]) =>
+            renderLink(key, item.href, item.label)
+          )}
         </ul>
       </nav>
     </header>
