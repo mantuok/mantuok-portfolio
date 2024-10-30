@@ -1,10 +1,10 @@
-import "./header.module.scss";
+import styles from "./header.module.scss";
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className={styles["header"]}>
       <nav>
-        <ul className="navigation-list">
+        <ul className={styles["navigation-list"]}>
           <li>Home</li>
           <li>About Me</li>
           <li>Projects</li>
