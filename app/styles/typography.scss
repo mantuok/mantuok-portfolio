@@ -1,0 +1,44 @@
+@use "./colors.scss" as *;
+
+.header-1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 300;
+  color: $secondary-color;
+}
+
+.link {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: $primary-color;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    &::before {
+      z-index: 1; 
+      transform: scaleY(1);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: $contrast-color;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      z-index: 1;
+      transform: scaleY(1);
+    }
+  }
+}
