@@ -18,11 +18,44 @@
   align-items: flex-end;
 }
 
+.link-wrapper {
+  background-color: $secondary-color;
+  width: max-content;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .link-forward {
   @include reset-anchor;
+  border: 0px solid #fff;
   padding: 7px 40px 8px 41px;
-  background-color: $secondary-color;
-  font-size: 20px;
-  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 1px;
   color: $primary-color;
+  position: relative;
+  transition: background-color 0.3s linear 0.3s;
+
+  &::after {
+    content: "";
+    display: block;
+    border-top: 2px solid $secondary-color;
+    border-bottom: 2px solid $secondary-color;
+    background: none;
+    position: absolute;
+    inset: 0;
+    transition: all 0.3s linear;
+  }
+
+  &:hover::after {
+    transform: scaleX(0);
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
 }

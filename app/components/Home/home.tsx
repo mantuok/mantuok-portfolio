@@ -8,7 +8,7 @@ const Home = () => {
       <div className={styles["home-wrapper-left"]}>
         <h1 className={styles["heading-1"]}>Svetlana Eliseeva</h1>
         <h2 className={styles["heading-2"]}>Front-end Developer</h2>
-        <div>
+        <div className={styles["link-wrapper"]}>
           <a className={styles["link-forward"]}>Get To Know Me</a>
         </div>
       </div>
