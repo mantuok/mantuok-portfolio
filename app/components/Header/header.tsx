@@ -7,9 +7,9 @@ import { NAV_ITEMS } from "./../../constants";
 const Header = () => {
   const [isVisible, setVisible] = useState(false);
 
-  const renderLink = (label: string) => {
+  const renderLink = (id: string, label: string) => {
     return (
-      <li>
+      <li key={id}>
         <a className={styles["link"]}>{label}</a>
       </li>
     );
@@ -35,7 +35,7 @@ const Header = () => {
     >
       <nav>
         <ul className={styles["navigation-list"]}>
-          {NAV_ITEMS.map((item) => renderLink(item.label))}
+          {NAV_ITEMS.map((item) => renderLink(item.href, item.label))}
         </ul>
       </nav>
     </header>

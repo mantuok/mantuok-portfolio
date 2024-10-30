@@ -5,13 +5,12 @@ import Divider from "../Utils/divider";
 const Home = () => {
   return (
     <section className={styles["home"]}>
-      <div>
-        <h1 className={`${styles["heading-1"]} ${styles["name"]}`}>
-          Svetlana Eliseeva
-        </h1>
-        <h2 className={`${styles["heading-2"]} ${styles["role"]}`}>
-          Front-end Developer
-        </h2>
+      <div className={styles["home-wrapper-left"]}>
+        <h1 className={styles["heading-1"]}>Svetlana Eliseeva</h1>
+        <h2 className={styles["heading-2"]}>Front-end Developer</h2>
+        <div>
+          <a className={styles["link-forward"]}>Get To Know Me</a>
+        </div>
       </div>
       <Divider />
       <div>
@@ -22,7 +21,6 @@ const Home = () => {
           height={412}
         />
       </div>
-      <div></div>
     </section>
   );
 };

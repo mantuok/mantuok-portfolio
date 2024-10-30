@@ -11,7 +11,18 @@
   height: 100vh;
 }
 
-.name,
-.role  {
-  text-align: right;
+.home-wrapper-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.link-forward {
+  @include reset-anchor;
+  padding: 7px 40px 8px 41px;
+  background-color: $secondary-color;
+  font-size: 20px;
+  font-weight: 400;
+  color: $primary-color;
 }
