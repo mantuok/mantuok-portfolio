@@ -1,8 +1,15 @@
 @use "./colors.scss" as *;
 
-.header-1 {
+.heading-1 {
   margin: 0;
   font-size: 42px;
+  font-weight: 300;
+  color: $secondary-color;
+}
+
+.heading-2 {
+  margin: 0;
+  font-size: 32px;
   font-weight: 300;
   color: $secondary-color;
 }
@@ -11,14 +18,14 @@
   position: relative;
   font-size: 18px;
   font-weight: 500;
+  line-height: 24px;
   color: $primary-color;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.3s ease;
 
   &:hover {
     &::before {
-      z-index: 1; 
+      z-index: 1;
       transform: scaleY(1);
     }
   }
