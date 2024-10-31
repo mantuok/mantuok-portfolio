@@ -14,7 +14,9 @@ const About = () => {
       <div className={styles["about-wrapper-bottom"]}>
         <div className={styles["about-wrapper-left"]}>Skills</div>
         <Divider />
-        <div>About</div>
+        <div>
+          <p className={styles["about-text"]}>I am a passionate Frontend developer with vast corporate experience as an IT consultant and a strong background in React and Typescript for the last 5 years, seeking opportunities to apply my skills and creativity to create impactful web experiences.</p>
+        </div>
       </div>
     </section>
   );
