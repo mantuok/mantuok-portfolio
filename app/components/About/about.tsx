@@ -4,12 +4,18 @@ import Divider from "../Utils/divider";
 const About = () => {
   return (
     <section className={styles["about"]}>
-      <h2 className={styles["heading-2"]} id="about">
+      <div id="about" className={styles["about-buffer"]}></div>
+      <h2
+        className={`${styles["heading-2"]} ${styles["about-heading"]}`}
+        id="about"
+      >
         About Me
       </h2>
-      <div className={styles["about-wrapper-left"]}>Skills</div>
-      <Divider />
-      <div>About</div>
+      <div className={styles["about-wrapper-bottom"]}>
+        <div className={styles["about-wrapper-left"]}>Skills</div>
+        <Divider />
+        <div>About</div>
+      </div>
     </section>
   );
 };
