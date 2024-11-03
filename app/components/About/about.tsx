@@ -1,5 +1,6 @@
 import styles from "./about.module.scss";
 import Divider from "../Utils/divider";
+import Skills from "../Skills/skills";
 
 const About = () => {
   return (
@@ -12,10 +13,18 @@ const About = () => {
         About Me
       </h2>
       <div className={styles["about-wrapper-bottom"]}>
-        <div className={styles["about-wrapper-left"]}>Skills</div>
+        <div className={styles["about-wrapper-left"]}>
+          <Skills />
+        </div>
         <Divider />
-        <div>
-          <p className={styles["about-text"]}>I am a passionate Frontend developer with vast corporate experience as an IT consultant and a strong background in React and Typescript for the last 5 years, seeking opportunities to apply my skills and creativity to create impactful web experiences.</p>
+        <div className={styles["about-wrapper-right"]}>
+          <p className={styles["about-text"]}>
+            I am a passionate Frontend developer with vast corporate experience
+            as an IT consultant and a strong background in React and Typescript
+            for the last 5 years, seeking opportunities to apply my skills and
+            creativity to create impactful web experiences.
+          </p>
+          <button>Download My CV</button>
         </div>
       </div>
     </section>
