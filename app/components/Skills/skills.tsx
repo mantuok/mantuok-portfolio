@@ -23,19 +23,36 @@ interface Position {
 }
 
 const Skills: React.FC = () => {
-  const icons: IconType[] = [
-    FaReact,
-    FaNode,
-    FaPython,
-    FaHtml5,
-    FaJs,
-    FaSass,
-    SiNextdotjs,
-    SiTypescript,
-    SiFigma,
-    SiJest,
-    SiBootstrap,
+
+  const icons = [
+    "/img/icon_chakraui.svg",
+    "/img/icon_reactjs.svg",
+    "/img/icon_nodejs.svg",
+    "/img/icon_css3.svg",
+    "/img/icon_materialui.svg",
+    "/img/icon_python.svg",
+    "/img/icon_html5.svg",
+    "/img/icon_sass.svg",
+    "/img/icon_nextjs.svg",
+    "/img/icon_typescript.svg",
+    "/img/icon_figma.svg",
+    "/img/icon_jest.svg",
+    "/img/icon_bootstrap5.svg",
   ];
+
+  // const icons: IconType[] = [
+  //   FaReact,
+  //   FaNode,
+  //   FaPython,
+  //   FaHtml5,
+  //   FaJs,
+  //   FaSass,
+  //   SiNextdotjs,
+  //   SiTypescript,
+  //   SiFigma,
+  //   SiJest,
+  //   SiBootstrap,
+  // ];
 
   const radius = 20; // Control the spread of icons
   const containerSize = 500; // Size of the container in pixels
@@ -75,12 +92,14 @@ const Skills: React.FC = () => {
 
   return (
     <div className={styles["skills-cloud"]}>
-      {icons.map((IconComponent, index) => {
+      {icons.map((path, index) => {
         const position = getRandomPosition(index, icons.length);
         return (
-          <IconComponent
+          <img
             key={index}
-            className={styles.icon}
+            src={path}
+            alt={`Icon ${index}`}
+            className={styles["icon"]}
             style={{
               top: `${position.top}%`,
               left: `${position.left}%`,
@@ -93,3 +112,17 @@ const Skills: React.FC = () => {
 };
 
 export default Skills;
+
+      // {/* {icons.map((IconComponent, index) => {
+      //   const position = getRandomPosition(index, icons.length);
+      //   return (
+      //     <IconComponent
+      //       key={index}
+      //       className={styles.icon}
+      //       style={{
+      //         top: `${position.top}%`,
+      //         left: `${position.left}%`,
+      //       }}
+      //     />
+      //   );
+      // })} */}
