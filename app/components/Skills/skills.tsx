@@ -14,9 +14,16 @@ import {
   SiJest,
   SiBootstrap,
 } from "react-icons/si";
+import { IconType } from "react-icons"; // Type for imported icon components
 
-const Skills = () => {
-  const icons = [
+// Define position type
+interface Position {
+  top: number;
+  left: number;
+}
+
+const Skills: React.FC = () => {
+  const icons: IconType[] = [
     FaReact,
     FaNode,
     FaPython,
@@ -30,40 +37,53 @@ const Skills = () => {
     SiBootstrap,
   ];
 
-  // interface Position {
-  //   top: number; // in pixels
-  //   left: number; // in pixels
-  // }
+  const radius = 20; // Control the spread of icons
+  const containerSize = 500; // Size of the container in pixels
 
-  const getFlowerPosition = (index: number, totalIcons: number) => {
-    const k = 7; // Adjust this to change the petal count
-    const a = 30; // Scaling factor for the radius of each icon
-    const angle = index * ((Math.PI * 2) / totalIcons); // Evenly distribute around circle
-    const r = a * Math.sin(k * angle); // Adjust 'a' and 'k' for shape of flower pattern
+  // Store placed positions to check for overlaps
+  const placedPositions: Position[] = [];
 
-    // Calculate positions in percentage to fit inside the container
-    const left = 50 + r * Math.cos(angle); // X position
-    const top = 50 + r * Math.sin(angle); // Y position
+  const getRandomPosition = (index: number, totalIcons: number): Position => {
+    let position: Position;
+    let attempts = 0;
+    const maxAttempts = 50;
 
-    return {
-      top: `${top}%`,
-      left: `${left}%`,
-    };
+    // Loop to find a non-overlapping position
+    do {
+      const angle = index * ((Math.PI * 2) / totalIcons) + Math.random() * 0.5; // Slight randomness
+      const distFromCenter = (radius - 45) + Math.random() * (containerSize / 2 - radius); // Vary distance
+
+      // Calculate position with random angle and distance
+      const left = 50 + (distFromCenter / containerSize) * 100 * Math.cos(angle);
+      const top = 50 + (distFromCenter / containerSize) * 100 * Math.sin(angle);
+
+      position = { top, left };
+
+      // Check for overlap with existing icons
+      attempts++;
+    } while (
+      attempts < maxAttempts &&
+      placedPositions.some(
+        (pos) =>
+          Math.hypot(pos.left - position.left, pos.top - position.top) < radius
+      )
+    );
+
+    placedPositions.push(position); // Store position to check future overlaps
+    return position;
   };
-
-  // const placedPositions: { top: number; left: number }[] = []; // Store placed positions
 
   return (
     <div className={styles["skills-cloud"]}>
       {icons.map((IconComponent, index) => {
-        const position = getFlowerPosition(index, icons.length);
+        const position = getRandomPosition(index, icons.length);
         return (
           <IconComponent
             key={index}
             className={styles.icon}
             style={{
-              top: position.top,
-              left: position.left,
+              top: `${position.top}%`,
+              left: `${position.left}%`,
             }}
           />
         );
