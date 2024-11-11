@@ -56,6 +56,20 @@ const Projects = ({ project }: ProjectsProps) => {
           <p className={`${styles["projects-text"]} ${styles["text-sm"]}`}>
             {skillset}
           </p>
+          {github ? (
+            <a className={styles["button"]} href={github} target="_blank">
+              <span className={styles["button-text"]}>Explore the Code</span>
+            </a>
+          ) : (
+            ""
+          )}
+          {url ? (
+            <a className={styles["button"]} href={url} target="_blank">
+              <span className={styles["button-text"]}>See It in Action</span>
+            </a>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </section>

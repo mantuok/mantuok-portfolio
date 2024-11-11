@@ -35,39 +35,3 @@
   width: 70%;
   letter-spacing: 3px;
 }
-
-.about-button {
-  @include reset-button;
-  position: relative;
-  font-size: 20px;
-  letter-spacing: 1.8px;
-  font-weight: 300;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -26px;
-    left: -7px;
-    height: 10px;
-    width: 170px;
-    background-color: $contrast-color;
-    z-index: 2;
-    transform-origin: bottom;
-    transition: transform 0.3s ease;
-    transform: scaleY(1);
-  }
-  &:hover::before {
-    transform: scaleY(2.5);
-  }
-  &:active {
-    font-weight: 500;
-  }
-}
-
-.about-button-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: max-content;
-  z-index: 3;
-}
