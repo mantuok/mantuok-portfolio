@@ -65,6 +65,8 @@ const Skills: React.FC = () => {
           <Image
             key={index}
             src={path}
+            width={50}
+            height={50}
             alt={`Icon ${index}`}
             className={styles["icon"]}
             style={{

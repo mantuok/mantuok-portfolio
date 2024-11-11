@@ -1,10 +1,34 @@
-import styles from "./about.module.scss";
+import styles from "./projects.module.scss";
 import Divider from "../Utils/divider";
+import Image from "next/image";
 
-const Projects = () => {
+type ImageData = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
+type Project = {
+  id: number;
+  name: string;
+  title: string;
+  description: string;
+  skillset: string;
+  image: ImageData;
+  url: string;
+  github: string;
+};
+
+interface ProjectsProps {
+  project: Project;
+}
+
+const Projects = ({ project }: ProjectsProps) => {
+  const { title, description, image, skillset, url, github } = project;
   return (
-    <section className={styles["projects"]}>
-      <div id="about" className={styles["projects-buffer"]}></div>
+    <section id="projects" className={styles["projects"]}>
+      <div className={styles["projects-buffer"]}></div>
       <h2
         className={`${styles["heading-2"]} ${styles["projects-heading"]}`}
         id="about"
@@ -12,15 +36,19 @@ const Projects = () => {
         Projects
       </h2>
       <div className={styles["projects-wrapper-bottom"]}>
-        <div className={styles["projects-wrapper-left"]}></div>
+        <div className={styles["projects-wrapper-left"]}>
+          <Image
+            src={image.src}
+            width={image.width}
+            height={image.height}
+            alt={image.alt}
+          />
+        </div>
         <Divider />
         <div className={styles["projects-wrapper-right"]}>
-          <p className={styles["projects-text"]}>
-            I am a passionate Frontend developer with vast corporate experience
-            as an IT consultant and a strong background in React and Typescript
-            for the last 5 years, seeking opportunities to apply my skills and
-            creativity to create impactful web experiences.
-          </p>
+          <h3 className={styles["heading-3"]}>{title}</h3>
+          <p className={styles["projects-text"]}>{description}</p>
+          <p className={styles["projects-text"]}>{skillset}</p>
         </div>
       </div>
     </section>

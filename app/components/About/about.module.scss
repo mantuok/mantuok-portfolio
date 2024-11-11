@@ -57,7 +57,7 @@
     transform: scaleY(1);
   }
   &:hover::before {
-    transform: scaleY(2.5); // Trigger scale on parent hover
+    transform: scaleY(2.5);
   }
   &:active {
     font-weight: 500;
