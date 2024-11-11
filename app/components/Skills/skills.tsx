@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./skills.module.scss";
 
 interface Position {
@@ -6,7 +7,6 @@ interface Position {
 }
 
 const Skills: React.FC = () => {
-
   const icons = [
     "/img/icon_chakraui.svg",
     "/img/icon_reactjs.svg",
@@ -35,9 +35,11 @@ const Skills: React.FC = () => {
 
     do {
       const angle = index * ((Math.PI * 2) / totalIcons) + Math.random() * 0.5; // Slight randomness
-      const distFromCenter = (radius - 45) + Math.random() * (containerSize / 2 - radius); // Vary distance
+      const distFromCenter =
+        radius - 45 + Math.random() * (containerSize / 2 - radius); // Vary distance
 
-      const left = 50 + (distFromCenter / containerSize) * 100 * Math.cos(angle);
+      const left =
+        50 + (distFromCenter / containerSize) * 100 * Math.cos(angle);
       const top = 50 + (distFromCenter / containerSize) * 100 * Math.sin(angle);
 
       position = { top, left };
@@ -51,7 +53,7 @@ const Skills: React.FC = () => {
       )
     );
 
-    placedPositions.push(position); 
+    placedPositions.push(position);
     return position;
   };
 
@@ -60,7 +62,7 @@ const Skills: React.FC = () => {
       {icons.map((path, index) => {
         const position = getRandomPosition(index, icons.length);
         return (
-          <img
+          <Image
             key={index}
             src={path}
             alt={`Icon ${index}`}
