@@ -60,7 +60,7 @@
     transform: scaleY(2.5); // Trigger scale on parent hover
   }
   &:active {
-    opacity: 0.5;
+    font-weight: 500;
   }
 }
 
