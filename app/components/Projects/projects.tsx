@@ -14,7 +14,7 @@ type Project = {
   name: string;
   title: string;
   description: string;
-  skillset: string;
+  skillset: (string | JSX.Element)[];
   image: ImageData;
   url: string;
   github: string;
@@ -37,18 +37,25 @@ const Projects = ({ project }: ProjectsProps) => {
       </h2>
       <div className={styles["projects-wrapper-bottom"]}>
         <div className={styles["projects-wrapper-left"]}>
-          <Image
-            src={image.src}
-            width={image.width}
-            height={image.height}
-            alt={image.alt}
-          />
+          <div className={styles["projects-image-wrapper"]}>
+            <Image
+              className={styles["projects-image"]}
+              src={image.src}
+              width={image.width}
+              height={image.height}
+              alt={image.alt}
+            />
+          </div>
         </div>
         <Divider />
         <div className={styles["projects-wrapper-right"]}>
           <h3 className={styles["heading-3"]}>{title}</h3>
-          <p className={styles["projects-text"]}>{description}</p>
-          <p className={styles["projects-text"]}>{skillset}</p>
+          <p className={`${styles["projects-text"]} ${styles["text-sm"]}`}>
+            {description}
+          </p>
+          <p className={`${styles["projects-text"]} ${styles["text-sm"]}`}>
+            {skillset}
+          </p>
         </div>
       </div>
     </section>

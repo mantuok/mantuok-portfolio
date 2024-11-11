@@ -31,8 +31,11 @@ export const ProjectsData = [
     title: "Local Transport Company Web App",
     description:
       "This project enhances user experience for customers and drivers by connecting them through a multi-role web application.",
-    skillset:
-      "Using React.js, TypeScript, and Material UI, I implemented responsive interfaces and provide ongoing support to ensure the application functions correctly.",
+    skillset: [
+      "Using ",
+      <strong key="1">React.js, TypeScript, and Material UI</strong>,
+      ", I implemented responsive interfaces and provide ongoing support to ensure the application functions correctly.",
+    ],
     image: {
       src: "/img/project_iujex.png",
       width: 527,
@@ -65,8 +68,11 @@ export const ProjectsData = [
     title: "Local Bank Web App",
     description:
       "This project enhances the banking experience by providing tools for calculating mortgage and loan options.",
-    skillset:
-      "Using React, Redux, and Sass, I developed an  interface with efficient state management to ensure accurate calculations and a seamless user experience.",
+    skillset: [
+      "Using ",
+      <strong key="1">React, Redux, and Sass</strong>,
+      ", I developed an  interface with efficient state management to ensure accurate calculations and a seamless user experience.",
+    ],
     image: {
       src: "/img/project_ligabank.png",
       width: 516,
@@ -82,8 +88,11 @@ export const ProjectsData = [
     title: "Car Dealership Website",
     description:
       "This project improves the user experience for car buyers by providing a platform to explore vehicles and read customer reviews.",
-    skillset:
-      "Using React, Redux, and Sass, I developed an  interface that allows seamless browsing and effective state management for enhanced functionality.",
+    skillset: [
+      "Using ",
+      <strong key="1">React, Redux, and Sass</strong>,
+      ", I developed an  interface that allows seamless browsing and effective state management for enhanced functionality.",
+    ],
     image: {
       src: "/img/project_avtomoto.png",
       width: 496,
@@ -99,8 +108,11 @@ export const ProjectsData = [
     title: "Cat Food Manufacturer Website",
     description:
       "This project provides a responsive and adaptive web site for innovative cat food  and facilitates orders through catalog and order form.",
-    skillset:
-      "Using HTML5, LESS, and BEM methodology, I implemented clean and maintainable code to create an engaging and user-friendly interface.",
+    skillset: [
+      "Using ",
+      <strong key="1">HTML5, LESS, and BEM methodology</strong>,
+      ", I implemented clean and maintainable code to create an engaging and user-friendly interface.",
+    ],
     image: {
       src: "/img/project_catenergy.png",
       width: 550,
@@ -116,12 +128,15 @@ export const ProjectsData = [
     title: "Ice-Cream Parlour Website",
     description:
       "This project enhances user experience for customers and drivers by connecting them through a multi-role web application.",
-    skillset:
-      "Using HTML5 and CSS3, I built a visually appealing interface to engage users and highlight the brand’s offerings.",
+    skillset: [
+      "Using ",
+      <strong key="1">HTML5 and CSS3</strong>,
+      ", I built a visually appealing interface to engage users and highlight the brand’s offerings.",
+    ],
     image: {
       src: "/img/project_gllacy.png",
-      width: 540,
-      height: 464,
+      width: 521,
+      height: 423,
       alt: "Gllacy Project",
     },
     url: "https://mantuok.github.io/gllacy-parlour/",
