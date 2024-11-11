@@ -16,7 +16,7 @@ const Home = () => {
         </div>
       </div>
       <Divider />
-      <div>
+      <div className={styles["home-wrapper-right"]}>
         <Image
           src="/img/SE_photo_big.png"
           alt="Svetlana Eliseeva"
