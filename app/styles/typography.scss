@@ -26,6 +26,13 @@
   color: $secondary-color;
 }
 
+.heading-4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: $secondary-color;
+}
+
 .text-sm {
   font-size: 14px;
   font-weight: 300;
@@ -107,5 +114,4 @@
 .button-text {
   position: relative;
   z-index: 2;
-  width: max-content;
 }
