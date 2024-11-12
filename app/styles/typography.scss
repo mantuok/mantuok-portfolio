@@ -72,35 +72,40 @@
   @include reset-button;
   @include reset-anchor;
   position: relative;
+  padding: 5px;
   font-size: 20px;
   letter-spacing: 1.8px;
   font-weight: 300;
+  overflow: hidden;
+  transition: color 0.5s ease;
 
   &::before {
     content: "";
     position: absolute;
-    bottom: -26px;
-    left: -7px;
+    bottom: 5px;
+    left: 0;
     height: 10px;
-    width: 170px;
+    width: 100%;
     background-color: $contrast-color;
-    z-index: 2;
     transform-origin: bottom;
     transition: transform 0.3s ease;
     transform: scaleY(1);
   }
-  &:hover::before {
-    transform: scaleY(2.5);
+  &:hover {
+    color: $primary-color;
   }
+
+  &:hover::before {
+    transform: scaleY(3);
+  }
+
   &:active {
-    font-weight: 500;
+    color: $secondary-color;
   }
 }
 
 .button-text {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  z-index: 2;
   width: max-content;
-  z-index: 3;
 }

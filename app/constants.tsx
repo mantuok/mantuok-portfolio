@@ -51,8 +51,11 @@ export const ProjectsData = [
     title: "Earthquake Preparedness Web App",
     description:
       "This project improves earthquake preparedness awareness in San Francisco with responsive user interfaces. ",
-    skillset:
-      "Using Next.js, TypeScript, and Chakra UI, I design an intuitive experience and ensure reliability through Jest testing.",
+    skillset: [
+      "Using ",
+      <strong key="1">Next.js, TypeScript, and Chakra UI</strong>,
+      ", I design an intuitive experience and ensure reliability through Jest testing.",
+    ],
     image: {
       src: "/img/project_earthquake.png",
       width: 356,
