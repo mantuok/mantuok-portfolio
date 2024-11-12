@@ -24,9 +24,13 @@ const About = () => {
             for the last 5 years, seeking opportunities to apply my skills and
             creativity to create impactful web experiences.
           </p>
-          <button className={styles["button"]}>
+          <a
+            className={styles["button"]}
+            href="/Svetlana_Eliseeva_CV.pdf"
+            download="/Svetlana_Eliseeva_CV.pdf"
+          >
             <span className={styles["button-text"]}>Download CV</span>
-          </button>
+          </a>
         </div>
       </div>
     </section>
