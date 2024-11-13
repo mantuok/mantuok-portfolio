@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-items: flex-end;
   gap: 45px;
   height: 100vh;
   padding-top: 60px;
@@ -17,7 +17,8 @@
   display: flex;
   align-items: flex-start;
   gap: 120px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-wrapper-right,
@@ -27,6 +28,10 @@
 	align-items: center;
 	gap: 15px;
 	padding-top: 120px;
+}
+
+.contact-wrapper-left {
+  margin-right: 88px;
 }
 
 .contact-buffer {
