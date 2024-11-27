@@ -43,7 +43,7 @@ export const ProjectsData = [
       alt: "iUjex Project",
     },
     url: "https://iujex.com/",
-    github: "",
+    github: "https://gist.github.com/mantuok/dd66198dc0e709e46d486e984682e8c4",
   },
   {
     id: 2,
