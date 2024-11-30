@@ -85,8 +85,8 @@ export const SkillsIcons = [
     label: "materialui",
     path: "/img/icon_materialui.svg",
     position: {
-      top: 225, // Ring 2, angle 180°
-      left: 140,
+      top: 185, // Ring 2, angle 180°
+      left: 120,
     },
   },
   {
@@ -145,8 +145,8 @@ export const SkillsIcons = [
     label: "figma",
     path: "/img/icon_figma.svg",
     position: {
-      top: 305, // Ring 3, angle 180°
-      left: 85,
+      top: 295, // Ring 3, angle 180°
+      left: 115,
     },
   },
   {
