@@ -1,77 +1,77 @@
 import Image from "next/image";
 import styles from "./skills.module.scss";
+import { SkillsIcons } from "../../constants";
 
-interface Position {
-  top: number;
-  left: number;
-}
+// interface Position {
+//   top: number;
+//   left: number;
+// }
 
 const Skills: React.FC = () => {
-  const icons = [
-    "/img/icon_chakraui.svg",
-    "/img/icon_reactjs.svg",
-    "/img/icon_nodejs.svg",
-    "/img/icon_css3.svg",
-    "/img/icon_materialui.svg",
-    "/img/icon_python.svg",
-    "/img/icon_html5.svg",
-    "/img/icon_sass.svg",
-    "/img/icon_nextjs.svg",
-    "/img/icon_typescript.svg",
-    "/img/icon_figma.svg",
-    "/img/icon_jest.svg",
-    "/img/icon_bootstrap5.svg",
-  ];
+  // const icons = [
+  //   "/img/icon_chakraui.svg",
+  //   "/img/icon_reactjs.svg",
+  //   "/img/icon_nodejs.svg",
+  //   "/img/icon_css3.svg",
+  //   "/img/icon_materialui.svg",
+  //   "/img/icon_python.svg",
+  //   "/img/icon_html5.svg",
+  //   "/img/icon_sass.svg",
+  //   "/img/icon_nextjs.svg",
+  //   "/img/icon_typescript.svg",
+  //   "/img/icon_figma.svg",
+  //   "/img/icon_jest.svg",
+  //   "/img/icon_bootstrap5.svg",
+  // ];
 
-  const radius = 20;
-  const containerSize = 500;
+  // const radius = 20;
+  // const containerSize = 500;
 
-  const placedPositions: Position[] = [];
+  // const placedPositions: Position[] = [];
 
-  const getRandomPosition = (index: number, totalIcons: number): Position => {
-    let position: Position;
-    let attempts = 0;
-    const maxAttempts = 50;
+  // const getRandomPosition = (index: number, totalIcons: number): Position => {
+  //   let position: Position;
+  //   let attempts = 0;
+  //   const maxAttempts = 50;
 
-    do {
-      const angle = index * ((Math.PI * 2) / totalIcons) + Math.random() * 0.5; // Slight randomness
-      const distFromCenter =
-        radius - 45 + Math.random() * (containerSize / 2 - radius); // Vary distance
+  //   do {
+  //     const angle = index * ((Math.PI * 2) / totalIcons) + Math.random() * 0.5; // Slight randomness
+  //     const distFromCenter =
+  //       radius - 45 + Math.random() * (containerSize / 2 - radius); // Vary distance
 
-      const left =
-        50 + (distFromCenter / containerSize) * 100 * Math.cos(angle);
-      const top = 50 + (distFromCenter / containerSize) * 100 * Math.sin(angle);
+  //     const left =
+  //       50 + (distFromCenter / containerSize) * 100 * Math.cos(angle);
+  //     const top = 50 + (distFromCenter / containerSize) * 100 * Math.sin(angle);
 
-      position = { top, left };
+  //     position = { top, left };
 
-      attempts++;
-    } while (
-      attempts < maxAttempts &&
-      placedPositions.some(
-        (pos) =>
-          Math.hypot(pos.left - position.left, pos.top - position.top) < radius
-      )
-    );
+  //     attempts++;
+  //   } while (
+  //     attempts < maxAttempts &&
+  //     placedPositions.some(
+  //       (pos) =>
+  //         Math.hypot(pos.left - position.left, pos.top - position.top) < radius
+  //     )
+  //   );
 
-    placedPositions.push(position);
-    return position;
-  };
+  //   placedPositions.push(position);
+  //   return position;
+  // };
 
   return (
     <div className={styles["skills-cloud"]}>
-      {icons.map((path, index) => {
-        const position = getRandomPosition(index, icons.length);
+      {SkillsIcons.map((icon) => {
         return (
           <Image
-            key={index}
-            src={path}
+            key={icon.id}
+            src={icon.path}
             width={50}
             height={50}
-            alt={`Icon ${index}`}
+            alt={`Icon ${icon.label}`}
             className={styles["icon"]}
             style={{
-              top: `${position.top}%`,
-              left: `${position.left}%`,
+              top: icon.position.top,
+              left: icon.position.left,
             }}
           />
         );

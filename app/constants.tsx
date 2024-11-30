@@ -24,6 +24,153 @@ export const NAV_ITEM = {
   },
 };
 
+// .icon:nth-child(1) { left: 225px; top: 225px; }
+// .icon:nth-child(2) { left: 360px; top: 225px; }
+// .icon:nth-child(3) { left: 305px; top: 320px; }
+// .icon:nth-child(4) { left: 195px; top: 320px; }
+// .icon:nth-child(5) { left: 140px; top: 225px; }
+// .icon:nth-child(6) { left: 195px; top: 130px; }
+// .icon:nth-child(7) { left: 305px; top: 130px; }
+// .icon:nth-child(8) { left: 445px; top: 225px; }
+// .icon:nth-child(9) { left: 395px; top: 375px; }
+// .icon:nth-child(10) { left: 205px; top: 395px; }
+// .icon:nth-child(11) { left: 55px; top: 225px; }
+// .icon:nth-child(12) { left: 205px; top: 55px; }
+// .icon:nth-child(13) { left: 395px; top: 75px; }
+
+export const SkillsIcons = [
+  {
+    id: 1,
+    name: "chakraui",
+    label: "Chakra-UI",
+    path: "/img/icon_chakraui.svg",
+    position: {
+      top: 225, // Center
+      left: 225, // Center
+    },
+  },
+  {
+    id: 2,
+    name: "reactjs",
+    label: "React.js",
+    path: "/img/icon_reactjs.svg",
+    position: {
+      top: 225, // Ring 2, angle 0°
+      left: 360,
+    },
+  },
+  {
+    id: 3,
+    name: "nodejs",
+    label: "Node.js",
+    path: "/img/icon_nodejs.svg",
+    position: {
+      top: 320, // Ring 2, angle 60°
+      left: 305,
+    },
+  },
+  {
+    id: 4,
+    name: "css3",
+    label: "CSS3",
+    path: "/img/icon_css3.svg",
+    position: {
+      top: 320, // Ring 2, angle 120°
+      left: 195,
+    },
+  },
+  {
+    id: 5,
+    name: "Material-UI",
+    label: "materialui",
+    path: "/img/icon_materialui.svg",
+    position: {
+      top: 225, // Ring 2, angle 180°
+      left: 140,
+    },
+  },
+  {
+    id: 6,
+    name: "Python",
+    label: "python",
+    path: "/img/icon_python.svg",
+    position: {
+      top: 225, // Ring 3, angle 0°
+      left: 445,
+    },
+  },
+  {
+    id: 7,
+    name: "HTML5",
+    label: "html5",
+    path: "/img/icon_html5.svg",
+    position: {
+      top: 130, // Ring 2, angle 300°
+      left: 305,
+    },
+  },
+  {
+    id: 8,
+    name: "Sass",
+    label: "sass",
+    path: "/img/icon_sass.svg",
+    position: {
+      top: 130, // Ring 2, angle 240°
+      left: 195,
+    },
+  },
+  {
+    id: 9,
+    name: "Next.js",
+    label: "nextjs",
+    path: "/img/icon_nextjs.svg",
+    position: {
+      top: 55, // Ring 3, angle 240°
+      left: 205,
+    },
+  },
+  {
+    id: 10,
+    name: "TypeScript",
+    label: "typescript",
+    path: "/img/icon_typescript.svg",
+    position: {
+      top: 75, // Ring 3, angle 300°
+      left: 395,
+    },
+  },
+  {
+    id: 11,
+    name: "Figma",
+    label: "figma",
+    path: "/img/icon_figma.svg",
+    position: {
+      top: 305, // Ring 3, angle 180°
+      left: 85,
+    },
+  },
+  {
+    id: 12,
+    name: "Jest",
+    label: "jest",
+    path: "/img/icon_jest.svg",
+    position: {
+      top: 375, // Ring 3, angle 60°
+      left: 395,
+    },
+  },
+  {
+    id: 13,
+    name: "Bootstrap5",
+    label: "bootstrap5",
+    path: "/img/icon_bootstrap5.svg",
+    position: {
+      top: 395, // Ring 3, angle 120°
+      left: 205,
+    },
+  },
+];
+
 export const ProjectsData = [
   {
     id: 1,
