@@ -1,6 +1,7 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/mixins.scss" as *;
 @use "../../styles/typography.scss" as *;
+@use "../../styles/breakpoints.scss" as *;
 
 
 .header {
@@ -13,6 +14,11 @@
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: 10;
+
+  @media (max-width: $breakpoint-md) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 
 .visible {
@@ -23,7 +29,14 @@
   @include reset-list;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 47px;
   padding: 0 74px;
   color: $primary-color;
+
+  @media (max-width: $breakpoint-md) {
+    gap: 17px;
+    padding: 0 24px;
+    justify-content: space-between;
+  }
 }
