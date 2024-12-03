@@ -1,6 +1,7 @@
 const Divider = () => {
   return (
     <svg
+      className="divider"
       width="2"
       height="418"
       viewBox="0 0 2 418"

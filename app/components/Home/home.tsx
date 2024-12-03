@@ -22,6 +22,7 @@ const Home = () => {
           alt="Svetlana Eliseeva"
           width={400}
           height={412}
+          layout="responsive"
         />
       </div>
     </section>

@@ -1,4 +1,5 @@
 @use "./colors.scss" as *;
+@use './breakpoints' as *;
 
 body {
   background-color: $primary-color;
@@ -12,6 +13,13 @@ body {
   overflow-x: hidden;
   margin: 0;
   scroll-behavior: smooth;
+}
+
+.divider {
+  display: block;
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
 }
 
 
