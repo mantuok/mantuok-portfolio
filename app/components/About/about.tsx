@@ -16,7 +16,7 @@ const About = () => {
         <div className={styles["about-wrapper-left"]}>
           <Skills />
         </div>
-        <Divider />
+        <Divider className="about-divider" />
         <div className={styles["about-wrapper-right"]}>
           <p className={styles["about-text"]}>
             I am a passionate Frontend developer with vast corporate experience

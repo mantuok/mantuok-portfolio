@@ -22,4 +22,10 @@ body {
   }
 }
 
+.divider.about-divider {
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+}
+
 

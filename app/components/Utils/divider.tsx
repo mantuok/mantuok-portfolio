@@ -1,7 +1,11 @@
-const Divider = () => {
+interface DividerProps {
+  className?: string;
+}
+
+const Divider: React.FC<DividerProps> = ({ className }) => {
   return (
     <svg
-      className="divider"
+      className={`divider ${className || ""}`.trim()}
       width="2"
       height="418"
       viewBox="0 0 2 418"

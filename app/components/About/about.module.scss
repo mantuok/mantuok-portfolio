@@ -1,6 +1,7 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/mixins.scss" as *;
 @use "../../styles/typography.scss" as *;
+@use "../../styles/breakpoints.scss" as *;
 
 .about {
   @include container;
@@ -11,6 +12,10 @@
   gap: 45px;
   height: 100vh;
   padding-top: 60px;
+
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 20px;
+  }
 }
 
 .about-wrapper-bottom {
@@ -19,11 +24,21 @@
   align-items: center;
   gap: 30px;
   margin: auto;
+
+  @media (max-width: $breakpoint-lg) {
+    flex-direction: column-reverse;
+    margin: 0;
+    gap: 45px;
+  }
 }
 
 .about-wrapper-right,
 .about-wrapper-left {
   width: 50%; 
+
+  @media (max-width: $breakpoint-lg) {
+    width: 80%;
+  }
 }
 
 .about-buffer {
@@ -34,4 +49,7 @@
 .about-text {
   width: 70%;
   letter-spacing: 3px;
+  @media (max-width: $breakpoint-lg) {
+    width: 100%;
+  }
 }
