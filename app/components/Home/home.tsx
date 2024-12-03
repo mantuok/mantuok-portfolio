@@ -23,6 +23,11 @@ const Home = () => {
           width={400}
           height={412}
           layout="responsive"
+          style={{
+            maxWidth: "400px",
+            width: "100%",
+            height: "auto",
+          }}
         />
       </div>
     </section>
