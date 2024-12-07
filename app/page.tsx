@@ -8,7 +8,7 @@ import Llama from "./components/Llama/llama";
 export default function Page() {
   return (
     <main>
-      <Llama />
+      {/* <Llama />git  */}
       <Home />
       <About />
       {ProjectsData.map((project) => (
