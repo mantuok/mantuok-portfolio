@@ -24,20 +24,6 @@ export const NAV_ITEM = {
   },
 };
 
-// .icon:nth-child(1) { left: 225px; top: 225px; }
-// .icon:nth-child(2) { left: 360px; top: 225px; }
-// .icon:nth-child(3) { left: 305px; top: 320px; }
-// .icon:nth-child(4) { left: 195px; top: 320px; }
-// .icon:nth-child(5) { left: 140px; top: 225px; }
-// .icon:nth-child(6) { left: 195px; top: 130px; }
-// .icon:nth-child(7) { left: 305px; top: 130px; }
-// .icon:nth-child(8) { left: 445px; top: 225px; }
-// .icon:nth-child(9) { left: 395px; top: 375px; }
-// .icon:nth-child(10) { left: 205px; top: 395px; }
-// .icon:nth-child(11) { left: 55px; top: 225px; }
-// .icon:nth-child(12) { left: 205px; top: 55px; }
-// .icon:nth-child(13) { left: 395px; top: 75px; }
-
 export const SkillsIcons = [
   {
     id: 1,
@@ -180,21 +166,22 @@ export const ProjectsData = [
       "This project enhances user experience for customers and drivers by connecting them through a multi-role web application.",
     skillset: [
       "Using ",
-      <strong key="1">React.js, TypeScript, and Material UI</strong>,
+      <strong key="1">React.js, TypeScript, Redux, and Sass</strong>,
       ", I implemented responsive interfaces and provide ongoing support to ensure the application functions correctly.",
     ],
     image: {
-      src: "/img/project_iujex.png",
-      width: 527,
-      height: 446,
+      src: "/img/project_iujex_v2.png",
+      width: 500,
+      height: 481,
       alt: "iUjex Project",
     },
     url: "https://iujex.com/",
-    github: "https://gist.github.com/mantuok/2935074bdc6250e0f14bd24af3584c85",
+    github:
+      "https://gist.github.com/mantuok/04aa4a4d1b69752f71a4981847cdb85e.js",
   },
   {
     id: 2,
-    name: "Earthquake",
+    name: "SafeHome SF",
     title: "Earthquake Preparedness Web App",
     description:
       "This project improves earthquake preparedness awareness in San Francisco with responsive user interfaces. ",
@@ -204,12 +191,12 @@ export const ProjectsData = [
       ", I design an intuitive experience and ensure reliability through Jest testing.",
     ],
     image: {
-      src: "/img/project_earthquake.png",
-      width: 356,
-      height: 384,
-      alt: "Earthquake Preparedness Project",
+      src: "/img/project_safehome.png",
+      width: 500,
+      height: 437,
+      alt: "SafeHome SF project",
     },
-    url: "",
+    url: "https://www.safehome.report/",
     github: "https://github.com/sfbrigade/datasci-earthquake",
   },
   {
