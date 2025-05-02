@@ -1,4 +1,4 @@
-import styles from "./projects.module.scss";
+import "./projects.scss";
 import Divider from "../Utils/divider";
 import Image from "next/image";
 
@@ -27,19 +27,16 @@ interface ProjectsProps {
 const Projects = ({ project }: ProjectsProps) => {
   const { title, description, image, skillset, url, github } = project;
   return (
-    <section id="projects" className={styles["projects"]}>
-      <div className={styles["projects-buffer"]}></div>
-      <h2
-        className={`${styles["heading-2"]} ${styles["projects-heading"]}`}
-        id="about"
-      >
+    <section id="projects" className="projects">
+      <div className="projects-buffer"></div>
+      <h2 className="heading-2 projects-heading" id="about">
         Projects
       </h2>
-      <div className={styles["projects-wrapper-bottom"]}>
-        <div className={styles["projects-wrapper-left"]}>
-          <div className={styles["projects-image-wrapper"]}>
+      <div className="projects-wrapper-bottom">
+        <div className="projects-wrapper-left">
+          <div className="projects-image-wrapper">
             <Image
-              className={styles["projects-image"]}
+              className="projects-image"
               src={image.src}
               width={image.width}
               height={image.height}
@@ -48,24 +45,20 @@ const Projects = ({ project }: ProjectsProps) => {
           </div>
         </div>
         <Divider />
-        <div className={styles["projects-wrapper-right"]}>
-          <h3 className={styles["heading-3"]}>{title}</h3>
-          <p className={`${styles["projects-text"]} ${styles["text-sm"]}`}>
-            {description}
-          </p>
-          <p className={`${styles["projects-text"]} ${styles["text-sm"]}`}>
-            {skillset}
-          </p>
+        <div className="projects-wrapper-right">
+          <h3 className="heading-3 projects-title">{title}</h3>
+          <p className="projects-text text-sm">{description}</p>
+          <p className="projects-text text-sm">{skillset}</p>
           {github ? (
-            <a className={styles["button"]} href={github} target="_blank">
-              <span className={styles["button-text"]}>Explore the Code</span>
+            <a className="button" href={github} target="_blank">
+              <span className="button-text">Explore the Code</span>
             </a>
           ) : (
             ""
           )}
           {url ? (
-            <a className={styles["button"]} href={url} target="_blank">
-              <span className={styles["button-text"]}>See It in Action</span>
+            <a className="button" href={url} target="_blank">
+              <span className="button-text">See It in Action</span>
             </a>
           ) : (
             ""
