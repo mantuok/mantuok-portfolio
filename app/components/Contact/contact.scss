@@ -1,6 +1,7 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/mixins.scss" as *;
 @use "../../styles/typography.scss" as *;
+@use "../../styles/breakpoints.scss" as *;
 
 .contact {
   @include container;
@@ -17,8 +18,16 @@
   display: flex;
   align-items: flex-start;
   gap: 120px;
+  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: $breakpoint-lg) {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 0;
+  }
 }
 
 .contact-wrapper-right,
@@ -28,10 +37,18 @@
 	align-items: center;
 	gap: 15px;
 	padding-top: 120px;
+
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 45px;
+  }
 }
 
 .contact-wrapper-left {
   margin-right: 55px;
+
+  @media (max-width: $breakpoint-lg) {
+    margin-right: 0;
+  }
 }
 
 .contact-buffer {

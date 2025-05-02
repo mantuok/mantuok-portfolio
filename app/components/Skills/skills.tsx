@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./skills.module.scss";
+import "./skills.scss";
 import { SkillsIcons } from "../../constants";
 
 // interface Position {
@@ -59,7 +59,7 @@ const Skills: React.FC = () => {
   // };
 
   return (
-    <div className={styles["skills-cloud"]}>
+    <div className="skills-cloud">
       {SkillsIcons.map((icon) => {
         return (
           <Image
@@ -68,7 +68,7 @@ const Skills: React.FC = () => {
             width={50}
             height={50}
             alt={`Icon ${icon.label}`}
-            className={styles["icon"]}
+            className="icon"
             style={{
               top: icon.position.top,
               left: icon.position.left,
