@@ -25,28 +25,29 @@
 
 .projects-carousel-wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10vw;
   width: 100vw;
+  overflow: hidden;
+}
+
+.projects-slides-wrapper {
+  width: 80vw;
+  display: flex;
   overflow: hidden;
 }
 
 .projects-carousel {
   display: flex;
-  width: 100%;
+  width: 80vw;
 }
 
 .projects-slide {
-  width: 100vw;
+  flex-shrink: 0;
+  width: 80vw;
 }
 
 .projects-slide-button {
-  position: absolute;
-  top: 50%;
-
-  &-previous {
-    left: 5%;
-  }
-
-  &-next {
-    right: 5%;
-  }
+  width: 10vw;
 }

@@ -40,18 +40,20 @@ const Projects = () => {
         >
           Previous
         </button>
-        <div
-          className="projects-carousel"
-          style={{
-            transition: "transform 0.3s ease",
-            transform: `translateX(-${currentSlideIndex * 100}vw)`,
-          }}
-        >
-          {ProjectsData.map((projectData, index) => (
-            <div className="projects-slide" key={index}>
-              <Project project={projectData} />
-            </div>
-          ))}
+        <div className="projects-slides-wrapper">
+          <div
+            className="projects-carousel"
+            style={{
+              transition: "transform 0.3s ease",
+              transform: `translateX(-${currentSlideIndex * 80}vw)`,
+            }}
+          >
+            {ProjectsData.map((projectData, index) => (
+              <div className="projects-slide" key={index}>
+                <Project project={projectData} />
+              </div>
+            ))}
+          </div>
         </div>
         <button
           onClick={() => handleCarouselButtonClick(CarouselButton.Right)}
