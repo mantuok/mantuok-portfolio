@@ -4,6 +4,7 @@ import "./styles/global.scss";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Analytics from "./components/analytics";
+import { Suspense } from "react";
 
 const poppins = Poppins({
   weight: ["200", "300", "400", "500", "700", "800"],
@@ -41,7 +42,9 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
-        <Analytics />
+        <Suspense>
+          <Analytics />
+        </Suspense>
         {children}
         <Header />
         <Footer />

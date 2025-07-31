@@ -30,27 +30,47 @@
   padding: 0 10vw;
   width: 100vw;
   overflow: hidden;
+
+   @media (max-width: $breakpoint-lg) {
+    padding: 0 15vw;
+  }
 }
 
 .projects-slides-wrapper {
   width: 80vw;
   display: flex;
   overflow: hidden;
+
+  @media (max-width: $breakpoint-lg) {
+    width: 70vw;
+  }
 }
 
 .projects-carousel {
   display: flex;
   width: 80vw;
+
+  @media (max-width: $breakpoint-lg) {
+    width: 70vw;
+  }
 }
 
 .projects-slide {
   flex-shrink: 0;
   width: 80vw;
+
+  @media (max-width: $breakpoint-lg) {
+    width: 70vw;
+  }
 }
 
 .projects-slide-button-wrapper {
   width: 10vw;
   text-align: center;
+
+   @media (max-width: $breakpoint-lg) {
+    width: 15vw;
+  }
 }
 
 .projects-slide-button {
