@@ -4,7 +4,6 @@ import "./projects.scss";
 import { ProjectsData } from "../../constants";
 import Project from "../Project/project";
 import { useEffect, useState } from "react";
-// import { useMediaQuery } from "react-responsive";
 import { useIsDesktop } from "@/app/hooks/useIsDesktop";
 
 enum CarouselButton {
@@ -77,7 +76,6 @@ const Projects = () => {
             style={{
               transition: isTransitionEnabled ? "transform 0.3s ease" : "none",
               transform: `translateX(-${currentSlideIndex * slideWidth}vw)`,
-              // transform: `translateX(-${currentSlideIndex * 80}vw)`,
             }}
           >
             {getSlides().map((projectData, index) => (
