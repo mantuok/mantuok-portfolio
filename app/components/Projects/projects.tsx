@@ -3,7 +3,7 @@
 import "./projects.scss";
 import { ProjectsData } from "../../constants";
 import Project from "../Project/project";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 enum CarouselButton {
   Right = 0,
@@ -11,21 +11,46 @@ enum CarouselButton {
 }
 
 const Projects = () => {
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
+  const [isTransitionEnabled, setTransitionEnabled] = useState(true);
   const totalSlides = ProjectsData.length;
+
+  const getSlides = () => {
+    const slides = [...ProjectsData];
+    const first = slides[0];
+    const last = slides[totalSlides - 1];
+    return [last, ...slides, first];
+  };
 
   const handleCarouselButtonClick = (buttonType: CarouselButton) => {
     setCurrentSlideIndex((prev) => {
       switch (buttonType) {
         case CarouselButton.Right:
-          return prev === totalSlides - 1 ? 0 : prev + 1;
+          return prev + 1;
         case CarouselButton.Left:
-          return prev === 0 ? totalSlides - 1 : prev - 1;
+          return prev - 1;
         default:
           return prev;
       }
     });
   };
+
+  const handleTransitionEnd = () => {
+    if (currentSlideIndex === 0) {
+      setTransitionEnabled(false);
+      setCurrentSlideIndex(totalSlides);
+    } else if (currentSlideIndex === totalSlides + 1) {
+      setTransitionEnabled(false);
+      setCurrentSlideIndex(1);
+    }
+  };
+
+  useEffect(() => {
+    if (!isTransitionEnabled) {
+      const timerId = setTimeout(() => setTransitionEnabled(true), 100);
+      return () => clearTimeout(timerId);
+    }
+  }, [isTransitionEnabled]);
 
   return (
     <section id="projects" className="projects">
@@ -44,12 +69,13 @@ const Projects = () => {
         <div className="projects-slides-wrapper">
           <div
             className="projects-carousel"
+            onTransitionEnd={handleTransitionEnd}
             style={{
-              transition: "transform 0.3s ease",
+              transition: isTransitionEnabled ? "transform 0.3s ease" : "none",
               transform: `translateX(-${currentSlideIndex * 80}vw)`,
             }}
           >
-            {ProjectsData.map((projectData, index) => (
+            {getSlides().map((projectData, index) => (
               <div className="projects-slide" key={index}>
                 <Project project={projectData} />
               </div>
