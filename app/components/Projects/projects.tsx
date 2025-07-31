@@ -5,6 +5,7 @@ import { ProjectsData } from "../../constants";
 import Project from "../Project/project";
 import { useEffect, useState } from "react";
 import { useIsDesktop } from "@/app/hooks/useIsDesktop";
+import { useSwipeable } from "react-swipeable";
 
 enum CarouselButton {
   Right = 0,
@@ -14,6 +15,7 @@ enum CarouselButton {
 const Projects = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
   const [isTransitionEnabled, setTransitionEnabled] = useState(true);
+
   const totalSlides = ProjectsData.length;
   const isDesktop = useIsDesktop();
   const slideWidth = isDesktop ? 80 : 70;
@@ -37,6 +39,12 @@ const Projects = () => {
       }
     });
   };
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => handleCarouselButtonClick(CarouselButton.Right),
+    onSwipedRight: () => handleCarouselButtonClick(CarouselButton.Left),
+    preventScrollOnSwipe: true,
+  });
 
   const handleTransitionEnd = () => {
     if (currentSlideIndex === 0) {
@@ -71,6 +79,7 @@ const Projects = () => {
         </div>
         <div className="projects-slides-wrapper">
           <div
+            {...swipeHandlers}
             className="projects-carousel"
             onTransitionEnd={handleTransitionEnd}
             style={{
