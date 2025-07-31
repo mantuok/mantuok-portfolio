@@ -34,12 +34,13 @@ const Projects = () => {
         Projects
       </h2>
       <div className="projects-carousel-wrapper">
-        <button
-          onClick={() => handleCarouselButtonClick(CarouselButton.Left)}
-          className="projects-slide-button projects-slide-button-previous"
-        >
-          Previous
-        </button>
+        <div className="projects-slide-button-wrapper">
+          <button
+            onClick={() => handleCarouselButtonClick(CarouselButton.Left)}
+            className="projects-slide-button projects-slide-button-previous"
+            aria-label="previous slide"
+          />
+        </div>
         <div className="projects-slides-wrapper">
           <div
             className="projects-carousel"
@@ -55,12 +56,13 @@ const Projects = () => {
             ))}
           </div>
         </div>
-        <button
-          onClick={() => handleCarouselButtonClick(CarouselButton.Right)}
-          className="projects-slide-button projects-slide-button-next"
-        >
-          Next
-        </button>
+        <div className="projects-slide-button-wrapper">
+          <button
+            onClick={() => handleCarouselButtonClick(CarouselButton.Right)}
+            className="projects-slide-button projects-slide-button-next"
+            aria-label="next slide"
+          />
+        </div>
       </div>
     </section>
   );
