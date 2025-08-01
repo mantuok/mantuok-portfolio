@@ -31,8 +31,8 @@ export const SkillsIcons = [
     label: "Chakra-UI",
     path: "/img/icon_chakraui.svg",
     position: {
-      top: 225,
-      left: 225,
+      top: 130,
+      left: 195,
     },
   },
   {
@@ -42,7 +42,7 @@ export const SkillsIcons = [
     path: "/img/icon_reactjs.svg",
     position: {
       top: 225, 
-      left: 360,
+      left: 340,
     },
   },
   {
@@ -71,8 +71,8 @@ export const SkillsIcons = [
     label: "materialui",
     path: "/img/icon_materialui.svg",
     position: {
-      top: 185,
-      left: 120,
+      top: 195,
+      left: 110,
     },
   },
   {
@@ -101,8 +101,8 @@ export const SkillsIcons = [
     label: "sass",
     path: "/img/icon_sass.svg",
     position: {
-      top: 130,
-      left: 195,
+      top: 225,
+      left: 225,
     },
   },
   {
@@ -152,7 +152,7 @@ export const SkillsIcons = [
     path: "/img/icon_bootstrap5.svg",
     position: {
       top: 395,
-      left: 205,
+      left: 245,
     },
   },
 ];
