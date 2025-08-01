@@ -4,51 +4,51 @@
 @use "../../styles/breakpoints.scss" as *;
 
 .footer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-	margin-top: -87px;
+  margin-top: -87px;
   padding-top: 10px;
   padding-bottom: 5px;
-	background-color: $secondary-color;
+  background-color: $secondary-color;
 }
 
 .footer-button-up {
-	@include reset-anchor;
-	margin-top: 5px;
-	transition: transform 0.3s ease;
+  @include reset-anchor;
+  margin-top: 5px;
+  transition: transform 0.3s ease;
 
-	&:hover {
-		transform: translateY(-8px);
+  &:hover {
+    transform: translateY(-8px);
 
-		.footer-icon-up path {
-			fill: $contrast-color;
-		}
-	}
+    .footer-icon-up path {
+      fill: $contrast-color;
+    }
+  }
 }
 
 .button-footer {
-	margin-top: -5px;
-	background-color: $secondary-color;
+  margin-top: -5px;
+  background-color: $secondary-color;
 
-	&::before {
-		height: 0.2em;
-		transition: transform 0.3s ease;
-		transform: scaleY(0);
-	}
+  &::before {
+    height: 0.2em;
+    transition: transform 0.3s ease;
+    transform: scaleY(0);
+  }
 
-	&:hover::before {
-		transform: scaleY(1);
-	}
+  &:hover::before {
+    transform: scaleY(1);
+  }
 }
 
 .button-text-footer {
-	font-size: 16px;
-	font-weight: 500;
-	color: $primary-color;
+  font-size: 16px;
+  font-weight: 500;
+  color: $primary-color;
 
-	@media (max-width: $breakpoint-lg) {
-		font-size: 12px;
+  @media (max-width: $breakpoint-lg) {
+    font-size: 12px;
   }
 }

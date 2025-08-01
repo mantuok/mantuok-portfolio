@@ -1,6 +1,6 @@
 @use "./colors.scss" as *;
 @use "./mixins.scss" as *;
-@use './breakpoints' as *;
+@use "./breakpoints" as *;
 
 .heading-1 {
   margin: 0;
@@ -24,7 +24,7 @@
   font-weight: 200;
   line-height: 0.5em;
   color: $secondary-color;
-  
+
   @media (max-width: $breakpoint-md) {
     font-size: 24px;
   }
@@ -92,7 +92,7 @@
     }
   }
 
-   @media (max-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-md) {
     margin: 0;
     font-size: 12px;
     line-height: 12px;

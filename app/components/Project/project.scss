@@ -33,18 +33,18 @@
 
 .project-wrapper-right,
 .project-wrapper-left {
-  width: 500px; 
+  width: 500px;
 
   @media (max-width: $breakpoint-lg) {
-    width: 100%
+    width: 100%;
   }
 }
 
 .project-wrapper-right {
   display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	gap: 15px;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
   margin-left: 66px;
 
   @media (max-width: $breakpoint-lg) {
@@ -54,9 +54,9 @@
 }
 
 .project-wrapper-left {
-	display: flex;
-	justify-content: flex-end;
-	padding-right: 60px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 60px;
 
   @media (max-width: $breakpoint-lg) {
     padding-right: 0px;
@@ -64,7 +64,7 @@
 }
 
 .project-image-wrapper {
-	position: relative;
+  position: relative;
   width: 360px;
   height: 450px;
   background-color: $secondary-color;
@@ -76,10 +76,10 @@
 }
 
 .project-image {
-	position: absolute;
-	top: -30px;
-	right: -30px;
-	z-index: 1;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  z-index: 1;
 
   @media (max-width: $breakpoint-lg) {
     right: 0;
@@ -89,6 +89,6 @@
 }
 
 .project-text {
-	margin: 0;
+  margin: 0;
   letter-spacing: 3px;
 }

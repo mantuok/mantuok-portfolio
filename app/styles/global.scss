@@ -1,5 +1,5 @@
 @use "./colors.scss" as *;
-@use './breakpoints' as *;
+@use "./breakpoints" as *;
 
 body {
   background-color: $primary-color;
@@ -27,5 +27,3 @@ body {
     display: none;
   }
 }
-
-

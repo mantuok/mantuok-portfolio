@@ -3,13 +3,11 @@ import "./skills.scss";
 import { SkillsIcons } from "../../constants";
 
 const Skills: React.FC = () => {
-
-
   return (
     <div className="skills-cloud">
       {SkillsIcons.map((icon) => {
         return (
-          <div 
+          <div
             className={`icon-wrapper icon-wrapper-${icon.label}`}
             style={{
               top: icon.position.top,

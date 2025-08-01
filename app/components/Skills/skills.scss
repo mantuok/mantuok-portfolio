@@ -61,7 +61,6 @@
   }
 }
 
-
 .icon-label {
   position: absolute;
   bottom: -10px;
@@ -74,5 +73,7 @@
 
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.5s ease, transform 0.3s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.3s ease;
 }

@@ -41,7 +41,7 @@ export const SkillsIcons = [
     label: "React.js",
     path: "/img/icon_reactjs.svg",
     position: {
-      top: 225, 
+      top: 225,
       left: 340,
     },
   },
