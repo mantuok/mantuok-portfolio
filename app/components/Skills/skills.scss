@@ -1,4 +1,5 @@
 @use "../../styles/breakpoints.scss" as *;
+@use "../../styles/colors.scss" as *;
 
 .skills-cloud {
   position: relative;
@@ -16,19 +17,62 @@
   }
 }
 
-.icon {
+.icon-wrapper {
   position: absolute;
-  font-size: 3rem;
-  color: #ffffff;
-  transition: transform 0.3s ease;
-  opacity: 0.9;
-
-  &:hover {
-    transform: scale(1.2) rotate(10deg);
-  }
 
   @media (max-width: $breakpoint-md) {
     position: static;
+  }
+
+  &:hover {
+    .icon-box rect {
+      stroke-dashoffset: 0;
+    }
+    .icon-label {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.icon-box {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  rect {
+    fill: transparent;
+    stroke: $contrast-color;
+    stroke-width: 3;
+    stroke-dasharray: 280;
+    stroke-dashoffset: 280;
+    transition: stroke-dashoffset 0.9s ease;
+  }
+}
+
+.icon {
+  position: relative;
+  margin: 5px;
+  font-size: 3rem;
+  color: #ffffff;
+  z-index: 1;
+
+  @media (max-width: $breakpoint-md) {
     font-size: 2rem;
   }
+}
+
+
+.icon-label {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  padding: 0 5px;
+
+  font-size: 10px;
+  color: $secondary-color;
+  background-color: $primary-color;
+
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }

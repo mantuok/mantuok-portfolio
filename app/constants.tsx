@@ -31,8 +31,8 @@ export const SkillsIcons = [
     label: "Chakra-UI",
     path: "/img/icon_chakraui.svg",
     position: {
-      top: 225, // Center
-      left: 225, // Center
+      top: 225,
+      left: 225,
     },
   },
   {
@@ -41,7 +41,7 @@ export const SkillsIcons = [
     label: "React.js",
     path: "/img/icon_reactjs.svg",
     position: {
-      top: 225, // Ring 2, angle 0°
+      top: 225, 
       left: 360,
     },
   },
@@ -51,7 +51,7 @@ export const SkillsIcons = [
     label: "Node.js",
     path: "/img/icon_nodejs.svg",
     position: {
-      top: 320, // Ring 2, angle 60°
+      top: 320,
       left: 305,
     },
   },
@@ -61,17 +61,17 @@ export const SkillsIcons = [
     label: "CSS3",
     path: "/img/icon_css3.svg",
     position: {
-      top: 320, // Ring 2, angle 120°
+      top: 320,
       left: 195,
     },
   },
   {
     id: 5,
-    name: "Material-UI",
+    name: "MaterialUI",
     label: "materialui",
     path: "/img/icon_materialui.svg",
     position: {
-      top: 185, // Ring 2, angle 180°
+      top: 185,
       left: 120,
     },
   },
@@ -81,7 +81,7 @@ export const SkillsIcons = [
     label: "python",
     path: "/img/icon_python.svg",
     position: {
-      top: 225, // Ring 3, angle 0°
+      top: 225,
       left: 445,
     },
   },
@@ -91,7 +91,7 @@ export const SkillsIcons = [
     label: "html5",
     path: "/img/icon_html5.svg",
     position: {
-      top: 130, // Ring 2, angle 300°
+      top: 130,
       left: 305,
     },
   },
@@ -101,7 +101,7 @@ export const SkillsIcons = [
     label: "sass",
     path: "/img/icon_sass.svg",
     position: {
-      top: 130, // Ring 2, angle 240°
+      top: 130,
       left: 195,
     },
   },
@@ -111,7 +111,7 @@ export const SkillsIcons = [
     label: "nextjs",
     path: "/img/icon_nextjs.svg",
     position: {
-      top: 55, // Ring 3, angle 240°
+      top: 55,
       left: 205,
     },
   },
@@ -121,7 +121,7 @@ export const SkillsIcons = [
     label: "typescript",
     path: "/img/icon_typescript.svg",
     position: {
-      top: 75, // Ring 3, angle 300°
+      top: 75,
       left: 395,
     },
   },
@@ -131,7 +131,7 @@ export const SkillsIcons = [
     label: "figma",
     path: "/img/icon_figma.svg",
     position: {
-      top: 295, // Ring 3, angle 180°
+      top: 295,
       left: 115,
     },
   },
@@ -141,7 +141,7 @@ export const SkillsIcons = [
     label: "jest",
     path: "/img/icon_jest.svg",
     position: {
-      top: 375, // Ring 3, angle 60°
+      top: 375,
       left: 395,
     },
   },
@@ -151,7 +151,7 @@ export const SkillsIcons = [
     label: "bootstrap5",
     path: "/img/icon_bootstrap5.svg",
     position: {
-      top: 395, // Ring 3, angle 120°
+      top: 395,
       left: 205,
     },
   },
