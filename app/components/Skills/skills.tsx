@@ -8,6 +8,7 @@ const Skills: React.FC = () => {
       {SkillsIcons.map((icon) => {
         return (
           <div
+            key={icon.id}
             className={`icon-wrapper icon-wrapper-${icon.label}`}
             style={{
               top: icon.position.top,
@@ -18,7 +19,6 @@ const Skills: React.FC = () => {
               <rect x="5" y="5" width="70" height="70" />
             </svg>
             <Image
-              key={icon.id}
               src={icon.path}
               width={50}
               height={50}
