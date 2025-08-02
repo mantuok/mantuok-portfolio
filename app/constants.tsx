@@ -163,7 +163,7 @@ export const SkillsIcons = [
     position: {
       top: "383px",
       left: "134px",
-    },   
+    },
   },
   {
     id: 15,
@@ -173,7 +173,7 @@ export const SkillsIcons = [
     position: {
       top: "150px",
       left: "414px",
-    },   
+    },
   },
   {
     id: 15,
@@ -183,7 +183,7 @@ export const SkillsIcons = [
     position: {
       top: "340px",
       left: "474px",
-    },   
+    },
   },
   {
     id: 16,
@@ -193,7 +193,7 @@ export const SkillsIcons = [
     position: {
       top: "110px",
       left: "84px",
-    },   
+    },
   },
   {
     id: 17,
@@ -203,7 +203,7 @@ export const SkillsIcons = [
     position: {
       top: "280px",
       left: "404px",
-    },   
+    },
   },
 ];
 
