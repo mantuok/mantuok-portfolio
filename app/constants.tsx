@@ -29,7 +29,7 @@ export const SkillsIcons = [
     id: 1,
     name: "chakraui",
     label: "Chakra-UI",
-    path: "/img/icon_chakraui.svg",
+    path: "/img/skills/icon_chakraui.svg",
     position: {
       top: 130,
       left: 195,
@@ -39,7 +39,7 @@ export const SkillsIcons = [
     id: 2,
     name: "reactjs",
     label: "React.js",
-    path: "/img/icon_reactjs.svg",
+    path: "/img/skills/icon_reactjs.svg",
     position: {
       top: 225,
       left: 340,
@@ -49,7 +49,7 @@ export const SkillsIcons = [
     id: 3,
     name: "nodejs",
     label: "Node.js",
-    path: "/img/icon_nodejs.svg",
+    path: "/img/skills/icon_nodejs.svg",
     position: {
       top: 320,
       left: 305,
@@ -59,17 +59,17 @@ export const SkillsIcons = [
     id: 4,
     name: "css3",
     label: "CSS3",
-    path: "/img/icon_css3.svg",
+    path: "/img/skills/icon_css3.svg",
     position: {
-      top: 320,
-      left: 195,
+      top: 308,
+      left: 207,
     },
   },
   {
     id: 5,
     name: "MaterialUI",
     label: "materialui",
-    path: "/img/icon_materialui.svg",
+    path: "/img/skills/icon_materialui.svg",
     position: {
       top: 195,
       left: 110,
@@ -79,17 +79,17 @@ export const SkillsIcons = [
     id: 6,
     name: "Python",
     label: "python",
-    path: "/img/icon_python.svg",
+    path: "/img/skills/icon_python.svg",
     position: {
-      top: 225,
-      left: 445,
+      top: 205,
+      left: 475,
     },
   },
   {
     id: 7,
     name: "HTML5",
     label: "html5",
-    path: "/img/icon_html5.svg",
+    path: "/img/skills/icon_html5.svg",
     position: {
       top: 130,
       left: 305,
@@ -99,7 +99,7 @@ export const SkillsIcons = [
     id: 8,
     name: "Sass",
     label: "sass",
-    path: "/img/icon_sass.svg",
+    path: "/img/skills/icon_sass.svg",
     position: {
       top: 225,
       left: 225,
@@ -109,7 +109,7 @@ export const SkillsIcons = [
     id: 9,
     name: "Next.js",
     label: "nextjs",
-    path: "/img/icon_nextjs.svg",
+    path: "/img/skills/icon_nextjs.svg",
     position: {
       top: 55,
       left: 205,
@@ -119,7 +119,7 @@ export const SkillsIcons = [
     id: 10,
     name: "TypeScript",
     label: "typescript",
-    path: "/img/icon_typescript.svg",
+    path: "/img/skills/icon_typescript.svg",
     position: {
       top: 75,
       left: 395,
@@ -129,7 +129,7 @@ export const SkillsIcons = [
     id: 11,
     name: "Figma",
     label: "figma",
-    path: "/img/icon_figma.svg",
+    path: "/img/skills/icon_figma.svg",
     position: {
       top: 295,
       left: 115,
@@ -139,7 +139,7 @@ export const SkillsIcons = [
     id: 12,
     name: "Jest",
     label: "jest",
-    path: "/img/icon_jest.svg",
+    path: "/img/skills/icon_jest.svg",
     position: {
       top: 375,
       left: 395,
@@ -149,11 +149,61 @@ export const SkillsIcons = [
     id: 13,
     name: "Bootstrap5",
     label: "bootstrap5",
-    path: "/img/icon_bootstrap5.svg",
+    path: "/img/skills/icon_bootstrap5.svg",
     position: {
       top: 395,
       left: 245,
     },
+  },
+  {
+    id: 14,
+    name: "Lua",
+    label: "lua",
+    path: "/img/skills/icon_lua.svg",
+    position: {
+      top: "383px",
+      left: "134px",
+    },   
+  },
+  {
+    id: 15,
+    name: "Docker",
+    label: "docker",
+    path: "/img/skills/icon_docker.svg",
+    position: {
+      top: "150px",
+      left: "414px",
+    },   
+  },
+  {
+    id: 15,
+    name: "Less",
+    label: "less",
+    path: "/img/skills/icon_less.svg",
+    position: {
+      top: "340px",
+      left: "474px",
+    },   
+  },
+  {
+    id: 16,
+    name: "Webpack",
+    label: "webpack",
+    path: "/img/skills/icon_webpack.svg",
+    position: {
+      top: "110px",
+      left: "84px",
+    },   
+  },
+  {
+    id: 17,
+    name: "Photoshop",
+    label: "photoshop",
+    path: "/img/skills/icon_photoshop.svg",
+    position: {
+      top: "280px",
+      left: "404px",
+    },   
   },
 ];
 
