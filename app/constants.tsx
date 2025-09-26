@@ -27,8 +27,8 @@ export const NAV_ITEM = {
 export const SkillsIcons = [
   {
     id: 1,
-    name: "chakraui",
-    label: "Chakra-UI",
+    name: "Chakra-UI",
+    label: "chakraui",
     path: "/img/skills/icon_chakraui.svg",
     position: {
       top: 130,
@@ -37,8 +37,8 @@ export const SkillsIcons = [
   },
   {
     id: 2,
-    name: "reactjs",
-    label: "React.js",
+    name: "React.js",
+    label: "reactjs",
     path: "/img/skills/icon_reactjs.svg",
     position: {
       top: 225,
@@ -47,8 +47,8 @@ export const SkillsIcons = [
   },
   {
     id: 3,
-    name: "nodejs",
-    label: "Node.js",
+    name: "Node.js",
+    label: "nodejs",
     path: "/img/skills/icon_nodejs.svg",
     position: {
       top: 320,
@@ -57,8 +57,8 @@ export const SkillsIcons = [
   },
   {
     id: 4,
-    name: "css3",
-    label: "CSS3",
+    name: "CSS3",
+    label: "css3",
     path: "/img/skills/icon_css3.svg",
     position: {
       top: 308,

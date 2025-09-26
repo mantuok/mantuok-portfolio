@@ -25,7 +25,7 @@ const Skills: React.FC = () => {
               alt={`Icon ${icon.label}`}
               className={`icon-${icon.label}`}
             />
-            <span className="icon-label">{icon.name}</span>
+            <span className="icon-label">{icon.label}</span>
           </div>
         );
       })}
