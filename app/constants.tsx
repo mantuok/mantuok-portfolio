@@ -483,7 +483,7 @@ export const ProjectsData = [
     name: "Gllacy",
     title: "Ice-Cream Parlour Website",
     description:
-      "This project enhances user experience for customers and drivers by connecting them through a multi-role web application.",
+      "This project improves the browsing experience for customers by showcasing the ice-cream shop’s offerings through an interactive web catalog.",
     skillset: [
       "Using ",
       <strong key="1">HTML5 and CSS3</strong>,
