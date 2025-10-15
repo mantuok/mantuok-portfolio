@@ -1,6 +1,7 @@
 import "./about.scss";
 import Divider from "../Utils/divider";
-import Skills from "../Skills/skills";
+// import Skills from "../Skills/skills";
+import SkillCloud from "../SkillCloud/skillCloud";
 
 const About = () => {
   return (
@@ -11,7 +12,8 @@ const About = () => {
       </h2>
       <div className="about-wrapper-bottom">
         <div className="about-wrapper-left">
-          <Skills />
+          {/* <Skills /> */}
+          <SkillCloud />
         </div>
         <Divider className="about-divider" />
         <div className="about-wrapper-right">

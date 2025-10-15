@@ -27,3 +27,12 @@ body {
     display: none;
   }
 }
+
+canvas {
+  position: relative;
+  z-index: 0;
+}
+
+img {
+  display: block;
+}
