@@ -2,6 +2,7 @@ import "./project.scss";
 import Divider from "../Utils/divider";
 import Image from "next/image";
 import { useState } from "react";
+import { useIsDesktop } from "@/app/hooks/useIsDesktop";
 
 type ImageData = {
   src: string;
@@ -10,6 +11,8 @@ type ImageData = {
   alt: string;
   top?: string;
   left?: string;
+  topMobile?: string;
+  leftMobile?: string;
   zIndex?: number;
   transform?: string;
 };
@@ -32,6 +35,7 @@ interface ProjectsProps {
 const Project = ({ project }: ProjectsProps) => {
   const { title, description, images, skillset, url, github } = project;
   const [hoveredIndex, setHoveredIndex] = useState<null | number>(null);
+  const isDesktop = useIsDesktop();
 
   const handleImageClick = (index: number) => {
     setHoveredIndex(index);
@@ -45,12 +49,12 @@ const Project = ({ project }: ProjectsProps) => {
           key={index}
           className="project-image"
           src={image.src}
-          width={image.width}
-          height={image.height}
+          width={isDesktop ? image.width : image.width / 2}
+          height={isDesktop ? image.height : image.height / 2}
           alt={image.alt}
           style={{
-            top: image.top || "-30px",
-            left: image.left || "-30px",
+            top: `${isDesktop ? image.top : image.topMobile}`,
+            left: `${isDesktop ? image.left : image.leftMobile}`,
             zIndex: isActive ? 99 : image.zIndex,
             transition:
               "box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease",
