@@ -42,6 +42,14 @@
   }
 }
 
+.about-wrapper-right {
+  margin-left: 66px;
+
+  @media (max-width: $breakpoint-lg) {
+    margin-left: 0;
+  }
+}
+
 .about-buffer {
   height: 60px;
   width: 100%;

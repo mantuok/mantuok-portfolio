@@ -1,16 +1,37 @@
+"use client";
+
 import "./contact.scss";
 import Divider from "../Utils/divider";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <motion.section
+      className="contact"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: { staggerChildren: 0.2 },
+        },
+      }}
+    >
       <div id="contact" className="contact-buffer"></div>
       <h2 className="heading-2 contact-heading" id="contact">
         Contact Me
       </h2>
       <div className="contact-wrapper-bottom">
-        <div className="contact-wrapper-left">
+        <motion.div
+          variants={{
+            hidden: { x: 40, opacity: 0 },
+            visible: { x: 0, opacity: 1 },
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="contact-wrapper-left"
+        >
           <h3 className="heading-4">You can find me in</h3>
           <div className="contact-wrapper-social">
             <a
@@ -40,16 +61,23 @@ const Contact = () => {
               />
             </a>
           </div>
-        </div>
+        </motion.div>
         <Divider />
-        <div className="contact-wrapper-right">
+        <motion.div
+          className="contact-wrapper-right"
+          variants={{
+            hidden: { x: -40, opacity: 0 },
+            visible: { x: 0, opacity: 1 },
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <h3 className="heading-4">You can contact me at</h3>
           <a className="button" href="mailto:mantuok@gmail.com">
             <span className="button-text">mantuok@gmail.com</span>
           </a>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
