@@ -3,6 +3,7 @@ import Divider from "../Utils/divider";
 import Image from "next/image";
 import { useState } from "react";
 import { useIsDesktop } from "@/app/hooks/useIsDesktop";
+import { motion } from "framer-motion";
 
 type ImageData = {
   src: string;
@@ -71,13 +72,39 @@ const Project = ({ project }: ProjectsProps) => {
   };
 
   return (
-    <div id="project" className="project">
+    <motion.div
+      id="project"
+      className="project"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: { staggerChildren: 0.2 },
+        },
+      }}
+    >
       <div className="project-wrapper-bottom">
-        <div className="project-wrapper-left">
+        <motion.div
+          className="project-wrapper-left"
+          variants={{
+            hidden: { x: 40, opacity: 0 },
+            visible: { x: 0, opacity: 1 },
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <div className="project-image-wrapper">{buildImages()}</div>
-        </div>
+        </motion.div>
         <Divider />
-        <div className="project-wrapper-right">
+        <motion.div
+          className="project-wrapper-right"
+          variants={{
+            hidden: { x: -40, opacity: 0 },
+            visible: { x: 0, opacity: 1 },
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <h3 className="heading-3 project-title">{title}</h3>
           <p className="project-text text-sm">{description}</p>
           <p className="project-text text-sm">{skillset}</p>
@@ -95,9 +122,9 @@ const Project = ({ project }: ProjectsProps) => {
           ) : (
             ""
           )}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
