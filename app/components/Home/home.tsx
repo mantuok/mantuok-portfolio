@@ -1,12 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import "./home.scss";
 import Divider from "../Utils/divider";
 import { NAV_ITEM } from "../../constants";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
     <section className="home">
-      <div className="home-wrapper-left">
+      <motion.div
+        className="home-wrapper-left"
+        initial={{ x: 40, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <h1 className="heading-1">Svetlana Eliseeva</h1>
         <h2 className="heading-2">Frontend Developer</h2>
         <div className="link-wrapper">
@@ -14,9 +22,14 @@ const Home = () => {
             Get To Know Me
           </a>
         </div>
-      </div>
+      </motion.div>
       <Divider />
-      <div className="home-wrapper-right">
+      <motion.div
+        className="home-wrapper-right"
+        initial={{ x: -40, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <Image
           src="/img/SE_photo_big.png"
           alt="Svetlana Eliseeva"
@@ -29,7 +42,7 @@ const Home = () => {
             height: "auto",
           }}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };

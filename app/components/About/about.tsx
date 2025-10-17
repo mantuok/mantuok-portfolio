@@ -1,22 +1,48 @@
+"use client";
+
 import "./about.scss";
 import Divider from "../Utils/divider";
-// import Skills from "../Skills/skills";
 import SkillCloud from "../SkillCloud/skillCloud";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="about">
+    <motion.section
+      className="about"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: { staggerChildren: 0.2 },
+        },
+      }}
+    >
       <div id="about" className="about-buffer"></div>
       <h2 className="heading-2 about-heading" id="about">
         About Me
       </h2>
       <div className="about-wrapper-bottom">
-        <div className="about-wrapper-left">
-          {/* <Skills /> */}
+        <motion.div
+          className="about-wrapper-left"
+          variants={{
+            hidden: { x: 40, opacity: 0 },
+            visible: { x: 0, opacity: 1 },
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <SkillCloud />
-        </div>
+        </motion.div>
         <Divider className="about-divider" />
-        <div className="about-wrapper-right">
+        <motion.div
+          className="about-wrapper-right"
+          variants={{
+            hidden: { x: -40, opacity: 0 },
+            visible: { x: 0, opacity: 1 },
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <p className="about-text">
             I am a passionate Frontend developer with vast corporate experience
             as an IT consultant and a strong background in React and Typescript
@@ -30,9 +56,9 @@ const About = () => {
           >
             <span className="button-text">Download CV</span>
           </a>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
