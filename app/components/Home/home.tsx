@@ -31,9 +31,11 @@ const Home = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <Image
-          src="/img/SE_photo_big.png"
+          // src="/img/SE_photo_big.png"
+          className="home-image"
+          src="/img/SE_photo_v2.jpg"
           alt="Svetlana Eliseeva"
-          width={400}
+          width={412}
           height={412}
           layout="responsive"
           style={{
