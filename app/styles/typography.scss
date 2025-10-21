@@ -115,19 +115,19 @@
     position: absolute;
     bottom: 5px;
     left: 0;
-    height: 0.5em;
+    height: 0.3em;
     width: 100%;
     background-color: $contrast-color;
     transform-origin: bottom;
     transition: transform 0.3s ease;
-    transform: scaleY(1);
+    transform: scaleY(-1);
   }
   &:hover {
     color: $primary-color;
   }
 
   &:hover::before {
-    transform: scaleY(3);
+    transform: scaleY(5);
   }
 
   &:active {

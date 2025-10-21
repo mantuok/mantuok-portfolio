@@ -67,7 +67,7 @@
   position: relative;
   width: 360px;
   height: 450px;
-  background-color: $secondary-color;
+  background-color: $backdrop-color;
 
   @media (max-width: $breakpoint-lg) {
     width: 100%;
